@@ -19,7 +19,7 @@ class Widgetler extends StatelessWidget {
 
       actions: [
         IconSlideAction(
-          color: Colors.green,
+          color: Colors.red,
           onTap: (){
             showGeneralDialog(
               barrierColor: Colors.blue.withOpacity(0.5),
@@ -85,7 +85,7 @@ class Widgetler extends StatelessWidget {
                 pageBuilder: (BuildContext context, Animation<double> animation1, Animation<double> animation2) {return Text(''); }
     );
             },
-          icon:Icons.edit,
+          icon:Icons.delete,
         )
       ], child: Container(
         width: double.infinity,

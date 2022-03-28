@@ -57,7 +57,7 @@ DatabaseHelper _dbhelper = DatabaseHelper();
             showAboutDialog(context: context,
               applicationVersion: '1.0',
               applicationName: 'Hatırlatıcı',
-              applicationLegalese: "Bu Uygulama Dr.Öğretim üyesi Ahmet Cevahir ÇINAR tarafından yürütülen 3301456 kodlu Mobil Programlama dersi kapsamında 193311098 no lu Yaşar Ağgöz tarafından 03.25.2022 yılında yapılmıştır",
+              applicationLegalese: "Bu Uygulama Dr.Öğretim üyesi Ahmet Cevahir ÇINAR tarafından yürütülen git cookodlu Mobil Programlama dersi kapsamında 193311098 no lu Yaşar Ağgöz tarafından 03.25.2022 yılında yapılmıştır",
             );
              },
              child: const Image(
