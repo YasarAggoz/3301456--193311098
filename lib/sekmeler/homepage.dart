@@ -57,7 +57,7 @@ DatabaseHelper _dbhelper = DatabaseHelper();
             showAboutDialog(context: context,
               applicationVersion: '1.0',
               applicationName: 'Hatırlatıcı',
-              applicationLegalese: "Bu Uygulama Dr.Öğretim üyesi Ahmet Cevahir ÇINAR tarafından yürütülen 3301456 kodlu Mobil Programlama dersi kapsamında 193311098 no lu Yaşar Ağgöz tarafından 03.25.2022 yılında yapılmıştır",
+              applicationLegalese: "Bu Uygulama Dr.Öğretim üyesi Ahmet Cevahir ÇINAR tarafından yürütülen 3311456 kodlu Mobil Programlama dersi kapsamında 193311098 no lu Yaşar Ağgöz tarafından 03.25.2022 yılında yapılmıştır",
             );
              },
              child: const Image(
@@ -90,16 +90,19 @@ DatabaseHelper _dbhelper = DatabaseHelper();
                Expanded(
                  child:FutureBuilder(
                    future: _dbhelper.notGetir(),
-                   builder: (context, AsyncSnapshot snapshot) {
-                     return ListView.builder(
-                         itemCount:snapshot.data.length,
-                         itemBuilder:(context,index){
-                           return Widgetler(
-                             baslik: snapshot.data[index].baslik,
-                             notlar: snapshot.data[index].notlar,
-                           );
+                   builder: (context, AsyncSnapshot snapshot)
+                   {
+                     if (snapshot.data == null) return Text('Yükleniyor');
+                         return ListView.builder(
 
-                         },
+                           itemCount:snapshot.data.length,
+                           itemBuilder:(context,index){
+                             return Widgetler(
+                               baslik: snapshot.data[index].baslik,
+                               notlar: snapshot.data[index].notlar,
+                             );
+
+                           },
                          );
                    },
                  )
