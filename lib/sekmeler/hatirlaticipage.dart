@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:proje/Veritabani/note.dart';
 import 'package:proje/Veritabani/notedata.dart';
 
+import 'homepage.dart';
+
 
 class Hatirlatici extends StatefulWidget {
 
@@ -115,7 +117,9 @@ class _HatirlaticiState extends State<Hatirlatici> {
             ScaffoldMessenger.of(context)
                 .showSnackBar(SnackBar(content : Text('Not Eklendi')));
 
-            Navigator.pop(context);
+            Navigator.push(context, MaterialPageRoute(
+                builder: (context) => const Homapage()
+            ));
 
           }
           else ScaffoldMessenger.of(context)

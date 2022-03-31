@@ -72,7 +72,7 @@ DatabaseHelper _dbhelper = DatabaseHelper();
       child: Container(
         width: double.infinity,
         padding: const EdgeInsets.symmetric(
-          horizontal: 24.0,
+          horizontal: 30.0,
         ),
         color: const Color(0xFFF6F6f6),
        child: Stack(
